@@ -33,7 +33,7 @@ public class PriceService implements IPriceService {
 
     @Override
     public Optional<Price> findPriceByParameters(String date, Integer productId, Integer brandId){
-        return (Optional<Price>) priceRepository.findByStartDateAndProductIdAndBrandId(date, productId, brandId);
+        return (Optional<Price>) priceRepository.findByEndDateAndProductIdAndBrandId(date, productId, brandId);
     }
 
     @Override

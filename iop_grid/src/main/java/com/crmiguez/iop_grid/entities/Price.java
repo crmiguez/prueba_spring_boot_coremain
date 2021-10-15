@@ -1,7 +1,5 @@
 package com.crmiguez.iop_grid.entities;
 
-import org.hibernate.annotations.ColumnDefault;
-
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
@@ -10,7 +8,7 @@ import java.io.Serializable;
 @Table
 
 public class Price implements Serializable{
-    @Id
+
     @Size(max = 10)
     @Column(name = "BrandId")
     private Integer brandId;
@@ -28,7 +26,6 @@ public class Price implements Serializable{
     private Integer productId;
 
     @Column(name="Priority")
-    @ColumnDefault(value = "0")
     private byte priority;
 
     @Column(name = "Price")
